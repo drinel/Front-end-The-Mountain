@@ -1,0 +1,198 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+.background-image{
+    background-image: url(img/mountain-top-clouds.jpg);
+    background-size: cover;
+    height: 92vh;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+.background-image h1 {
+    text-align: center;
+    font-family: 'The Nautigal', cursive;
+    font-size: 100px;
+}
+.background-image p{
+    text-align: justify;
+    justify-content: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 15px;
+}
+
+nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+min-height: 8vh;
+background-color: #5d4954; 
+font-family: 'Poppins', sans-serif;
+
+}
+
+
+.logo{
+color: rgb(226, 226, 226);
+text-transform: uppercase;
+letter-spacing: 5px;
+font-size: 20px;
+}
+
+.nav-links{
+display: flex;
+justify-content: space-around;
+width: 30%;
+}
+
+.nav-links li{
+list-style: none; 
+
+}
+
+.nav-links a{
+color: rgb(226, 226, 226);
+text-decoration: none;
+letter-spacing: 3px;
+font-weight: bold;
+font-size: 14px;
+
+}    
+a:hover{
+    color: rgb(120, 139, 151);
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+    @media screen and (max-width:600px) {
+   
+        .nav-links{
+            width: 15%;
+        
+            }
+    
+            .nav-links a{
+                letter-spacing: 2px;
+                font-size: 10px;
+                }   
+                .logo{
+                    font-size: 15px;
+                    letter-spacing: 3px;
+                }
+
+                @media screen and (max-width:430px) {
+   
+                    .nav-links{
+                        width: 10%;
+                    
+                        }
+                
+                        .nav-links a{
+                            letter-spacing: 1px;
+                            font-size: 8px;
+                            }   
+                            .logo{
+                                font-size: 10px;
+                                letter-spacing: 2px;
+                            }
+                    }
+                
+                    @media screen and (max-width:310px) {
+   
+                        .nav-links{
+                            width: 5%;
+                        
+                            }
+                    
+                            .nav-links a{
+                                letter-spacing: 1px;
+                                font-size: 7px;
+                                }   
+                                .logo{
+                                    font-size: 7px;
+                                    letter-spacing: 1px;
+                                }
+                        }
+                    
+                                    
+        }
+
+
+@media screen and (max-width:1024px) {
+   
+.nav-links{
+    width: 50%;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    body{
+        overflow-x: hidden;
+    }
+  .nav-links{
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top:8vh;
+      background-color: #5d4954;  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+      opacity: 0;
+  }
+  .burger{
+      display: block;
+  }
+ 
+}
+
+.nav-active{
+transform: translateX(0%);
+}
+
+
+@keyframes navLinkFade {
+    from{
+   opacity: 0;
+   transform: translateX(50px);
+    }
+    to{
+    opacity: 1;
+    transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+   opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
